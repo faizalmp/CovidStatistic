@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">CovidStatistic</string>
+    
+    <!--  VIEW STRING RESOURCES  -->
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat felis sit eget euismod et vulputate. Vitae lacus, maecenas odio ac.</string>
+
+    <string name="default_country">Country</string>
+    <string name="default_onboarding_title">Wear a Mask</string>
+    <string name="default_lang">EN</string>
+    <string name="default_number">-</string>
+
+    <string name="btn_next">Next</string>
+    <string name="btn_google">Login with Gmail</string>
+
+    <string name="label_statistic">Statistics</string>
+    <string name="label_select_country">Select Country</string>
+    <string name="label_last_update">Last update %s</string>
+    <string name="label_ratio_of_recovery">Ratio of Recovery</string>
+    <string name="label_total_case">Total Case</string>
+    <string name="label_active_case">Active Case</string>
+    <string name="label_recovered_case">Recovered</string>
+    <string name="label_death_case">Death</string>
+    <string name="label_affected">Affected</string>
+    <string name="label_recovered">Recovered</string>
+</resources>

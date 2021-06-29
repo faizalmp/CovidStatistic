@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">CovidStatistic</string>
+
+    <!--  VIEW STRING RESOURCES  -->
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat felis sit eget euismod et vulputate. Vitae lacus, maecenas odio ac.</string>
+
+    <string name="default_country">Negara</string>
+    <string name="default_onboarding_title">Pakai masker</string>
+    <string name="default_lang">ID</string>
+    <string name="default_number">-</string>
+
+    <string name="btn_next">Selanjutnya</string>
+    <string name="btn_google">Masuk dengan Gmail</string>
+
+    <string name="label_statistic">Statistik</string>
+    <string name="label_select_country">Pilih Negara</string>
+    <string name="label_last_update">Pembaruan terakhir %s</string>
+    <string name="label_ratio_of_recovery">Rasio Pemulihan</string>
+    <string name="label_total_case">Jumlah Kasus</string>
+    <string name="label_active_case">Kasus Aktif</string>
+    <string name="label_recovered_case">Kasus Sembuh</string>
+    <string name="label_death_case">Kematian</string>
+    <string name="label_affected">Aktif</string>
+    <string name="label_recovered">Sembuh</string>
+</resources>

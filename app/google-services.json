@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "988709684872",
+    "project_id": "covidstatistic-6698b",
+    "storage_bucket": "covidstatistic-6698b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:988709684872:android:722c43e43f6f8ab164413d",
+        "android_client_info": {
+          "package_name": "com.faizalempe.covidstatistic"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "988709684872-dojjksfmttbthoibs72ivu2oet8g52r7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyArU4SRMLncRSwGmMWA7tPulydzJEfLPz8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "988709684872-dojjksfmttbthoibs72ivu2oet8g52r7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="onboarding_title">
+        <item>Pakai Masker</item>
+        <item>Cuci Tangan dan Sanitasi</item>
+        <item>Jaga Jarak Fisik</item>
+    </string-array>
+
+    <string-array name="onboarding_text">
+        <item>@string/lorem_ipsum</item>
+        <item>@string/lorem_ipsum</item>
+        <item>@string/lorem_ipsum</item>
+    </string-array>
+
+    <integer-array name="onboarding_drawable">
+        <item>@drawable/ic_onboarding_1</item>
+        <item>@drawable/ic_onboarding_2</item>
+        <item>@drawable/ic_onboarding_3</item>
+    </integer-array>
+
+    <string-array name="lang_list">
+        <item>ID</item>
+        <item>EN</item>
+    </string-array>
+
+</resources>

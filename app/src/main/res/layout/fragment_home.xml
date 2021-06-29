@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/home_layout_top"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_percent="0.25"
+            android:background="@drawable/bg_top"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/home_txt_label_statistics"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_statistic"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/home_txt_label_select_country"
+                app:layout_constraintLeft_toLeftOf="@id/home_select_country"/>
+
+            <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                android:id="@+id/home_select_lang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingVertical="8dp"
+                android:paddingHorizontal="8dp"
+                android:gravity="center"
+                android:drawableStart="@drawable/ic_id"
+                android:drawableEnd="@drawable/ic_arrow_down_filled"
+                android:drawablePadding="8dp"
+                android:text="@string/default_lang"
+                android:textStyle="bold"
+                android:focusable="false"
+                android:background="@drawable/bg_rounded_32"
+                app:layout_constraintTop_toTopOf="@id/home_txt_label_statistics"
+                app:layout_constraintBottom_toBottomOf="@id/home_txt_label_statistics"
+                app:layout_constraintRight_toRightOf="@id/home_select_country"/>
+
+            <TextView
+                android:id="@+id/home_txt_label_select_country"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="@string/label_select_country"
+                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                android:textColor="@color/white"
+                app:layout_constraintLeft_toLeftOf="@id/home_select_country"
+                app:layout_constraintBottom_toTopOf="@id/home_select_country"/>
+
+            <TextView
+                android:id="@+id/home_txt_label_last_update"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_last_update"
+                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                android:textColor="@color/white"
+                android:textAlignment="textEnd"
+                app:layout_constraintTop_toTopOf="@id/home_txt_label_select_country"
+                app:layout_constraintBottom_toBottomOf="@id/home_txt_label_select_country"
+                app:layout_constraintRight_toRightOf="@id/home_select_country"/>
+
+            <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                android:id="@+id/home_select_country"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="12dp"
+                android:paddingHorizontal="8dp"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginBottom="32dp"
+                android:drawableStart="@drawable/ic_location"
+                android:drawableEnd="@drawable/ic_arrow_down"
+                android:drawablePadding="8dp"
+                android:focusable="false"
+                android:text="Indonesia"
+                android:textStyle="bold"
+                android:background="@drawable/bg_rounded_8"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/home_total_case_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            app:cardCornerRadius="8dp"
+            app:layout_constraintTop_toBottomOf="@id/home_layout_top"
+            app:layout_constraintLeft_toLeftOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="16dp">
+
+                <TextView
+                    android:id="@+id/home_total_case_txt_number"
+                    android:layout_width="86dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="24dp"
+                    android:text="@string/default_number"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/home_total_case_icon"/>
+
+                <TextView
+                    android:id="@+id/home_total_case_txt_label"
+                    android:layout_width="86dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_total_case"
+                    android:textColor="@color/warning"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    app:layout_constraintLeft_toLeftOf="@id/home_total_case_txt_number"
+                    app:layout_constraintTop_toBottomOf="@id/home_total_case_txt_number"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+
+                <ImageView
+                    android:id="@+id/home_total_case_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_total_case"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/home_active_case_card"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="32dp"
+            app:cardCornerRadius="8dp"
+            app:layout_constraintTop_toBottomOf="@id/home_layout_top"
+            app:layout_constraintBottom_toBottomOf="@id/home_total_case_card"
+            app:layout_constraintRight_toRightOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="16dp">
+
+                <TextView
+                    android:id="@+id/home_active_case_txt_number"
+                    android:layout_width="86dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="24dp"
+                    android:text="@string/default_number"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/home_active_case_icon"/>
+
+                <TextView
+                    android:id="@+id/home_active_case_txt_label"
+                    android:layout_width="86dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_active_case"
+                    android:textColor="@color/info"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    app:layout_constraintLeft_toLeftOf="@id/home_active_case_txt_number"
+                    app:layout_constraintTop_toBottomOf="@id/home_active_case_txt_number"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+
+                <ImageView
+                    android:id="@+id/home_active_case_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_active_case"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/home_recovered_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            app:cardCornerRadius="8dp"
+            app:layout_constraintTop_toBottomOf="@id/home_total_case_card"
+            app:layout_constraintLeft_toLeftOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="16dp">
+
+                <TextView
+                    android:id="@+id/home_recovered_txt_number"
+                    android:layout_width="86dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="24dp"
+                    android:text="@string/default_number"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/home_recovered_icon"/>
+
+                <TextView
+                    android:id="@+id/recovered_txt_label"
+                    android:layout_width="86dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_recovered"
+                    android:textColor="@color/success"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    app:layout_constraintLeft_toLeftOf="@id/home_recovered_txt_number"
+                    app:layout_constraintTop_toBottomOf="@id/home_recovered_txt_number"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+
+                <ImageView
+                    android:id="@+id/home_recovered_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_recovered"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/home_death_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="32dp"
+            app:cardCornerRadius="8dp"
+            app:layout_constraintTop_toBottomOf="@id/home_total_case_card"
+            app:layout_constraintRight_toRightOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="16dp">
+
+                <TextView
+                    android:id="@+id/home_death_txt_number"
+                    android:layout_width="86dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="24dp"
+                    android:text="@string/default_number"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/home_death_icon"/>
+
+                <TextView
+                    android:id="@+id/home_death_txt_label"
+                    android:layout_width="86dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_death_case"
+                    android:textColor="@color/error"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    app:layout_constraintLeft_toLeftOf="@id/home_death_txt_number"
+                    app:layout_constraintTop_toBottomOf="@id/home_death_txt_number"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+
+                <ImageView
+                    android:id="@+id/home_death_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_death"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/home_ratio_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="32dp"
+            app:cardCornerRadius="8dp"
+            app:layout_constraintTop_toBottomOf="@id/home_recovered_card"
+            app:layout_constraintRight_toRightOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="16dp">
+
+                <TextView
+                    android:id="@+id/home_ratio_txt_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="24dp"
+                    android:text="@string/label_ratio_of_recovery"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/home_layout_progress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    app:layout_constraintTop_toBottomOf="@id/home_ratio_txt_title"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent">
+
+                    <com.google.android.material.progressindicator.CircularProgressIndicator
+                        android:id="@+id/home_progress_neutral"
+                        android:layout_width="128dp"
+                        android:layout_height="128dp"
+                        app:indicatorSize="96dp"
+                        app:indicatorColor="@color/neutral"
+                        android:rotation="270"
+                        android:indeterminateOnly="false"
+                        app:trackCornerRadius="8dp"
+                        app:trackThickness="8dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:progress="100" />
+
+                    <com.google.android.material.progressindicator.CircularProgressIndicator
+                        android:id="@+id/home_progress_recovered"
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
+                        app:indicatorSize="128dp"
+                        app:indicatorColor="@color/accent"
+                        app:indicatorDirectionCircular="clockwise"
+                        android:rotation="180"
+                        android:indeterminateOnly="false"
+                        app:trackCornerRadius="8dp"
+                        app:trackThickness="8dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:progress="75" />
+
+                    <com.google.android.material.progressindicator.CircularProgressIndicator
+                        android:id="@+id/home_progress_affected"
+                        android:layout_width="192dp"
+                        android:layout_height="192dp"
+                        app:indicatorSize="156dp"
+                        app:indicatorColor="@color/primary"
+                        android:rotation="180"
+                        android:indeterminateOnly="false"
+                        app:trackCornerRadius="8dp"
+                        app:trackThickness="8dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:progress="25" />
+
+                    <TextView
+                        android:id="@+id/home_txt_progress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/default_number"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/black"
+                        app:layout_constraintBottom_toBottomOf="@+id/home_progress_neutral"
+                        app:layout_constraintEnd_toEndOf="@+id/home_progress_neutral"
+                        app:layout_constraintStart_toStartOf="@+id/home_progress_neutral"
+                        app:layout_constraintTop_toTopOf="@+id/home_progress_neutral" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/home_txt_number_affected"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="4dp"
+                    android:gravity="center"
+                    android:text="@string/default_number"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                    android:textStyle="bold"
+                    app:layout_constraintRight_toLeftOf="@id/home_txt_number_recovered"
+                    app:layout_constraintTop_toBottomOf="@id/home_layout_progress"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:drawableStartCompat="@drawable/ic_circle"
+                    app:drawableTint="@color/primary" />
+
+                <TextView
+                    android:id="@+id/home_txt_label_affected"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:text="@string/label_affected"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    app:layout_constraintTop_toBottomOf="@id/home_txt_number_affected"
+                    app:layout_constraintLeft_toLeftOf="@id/home_txt_number_affected"/>
+
+                <TextView
+                    android:id="@+id/home_txt_number_recovered"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="4dp"
+                    android:gravity="center"
+                    android:text="@string/default_number"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toRightOf="@id/home_txt_number_affected"
+                    app:layout_constraintTop_toBottomOf="@id/home_layout_progress"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:drawableStartCompat="@drawable/ic_circle"
+                    app:drawableTint="@color/accent" />
+
+                <TextView
+                    android:id="@+id/home_txt_label_recovered"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:text="@string/label_recovered"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    app:layout_constraintTop_toBottomOf="@id/home_txt_number_recovered"
+                    app:layout_constraintLeft_toLeftOf="@id/home_txt_number_recovered"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="onboarding_title">
+        <item>Wear a Mask</item>
+        <item>Hand Wash and Sanitize</item>
+        <item>Physical Distancing</item>
+    </string-array>
+
+    <string-array name="onboarding_text">
+        <item>@string/lorem_ipsum</item>
+        <item>@string/lorem_ipsum</item>
+        <item>@string/lorem_ipsum</item>
+    </string-array>
+
+    <integer-array name="onboarding_drawable">
+        <item>@drawable/ic_onboarding_1</item>
+        <item>@drawable/ic_onboarding_2</item>
+        <item>@drawable/ic_onboarding_3</item>
+    </integer-array>
+
+    <string-array name="lang_list">
+        <item>EN</item>
+        <item>ID</item>
+    </string-array>
+
+</resources>
