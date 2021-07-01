@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
     override fun attachBaseContext(newBase: Context?) {
         prefManager = PrefManager(newBase!!)
         val localeToSwitchTo = Locale(prefManager?.lang)
-        val localeUpdatedContext: ContextWrapper = ContextUtil.updateLocale(newBase!!, localeToSwitchTo)
+        val localeUpdatedContext: ContextWrapper = ContextUtil.updateLocale(newBase, localeToSwitchTo)
         super.attachBaseContext(localeUpdatedContext)
     }
 }

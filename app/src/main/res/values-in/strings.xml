@@ -4,7 +4,7 @@
     <!--  VIEW STRING RESOURCES  -->
     <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat felis sit eget euismod et vulputate. Vitae lacus, maecenas odio ac.</string>
 
-    <string name="default_country">Negara</string>
+    <string name="default_country">Indonesia</string>
     <string name="default_onboarding_title">Pakai masker</string>
     <string name="default_lang">ID</string>
     <string name="default_number">-</string>
